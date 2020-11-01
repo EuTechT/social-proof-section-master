@@ -1,0 +1,140 @@
+/*
+    CONTAINER
+*/
+#container {
+    margin: 6rem auto;
+}
+
+/*
+    BG PATTERN
+*/
+.bg-top-mobile, .bg-top-desktop {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.bg-top-desktop {
+    display: none;
+}
+
+.bg-bottom-mobile, .bg-bottom-desktop {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.bg-bottom-desktop {
+    display: none;
+}
+
+/*
+    HEADER
+*/
+.container__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 4.2rem;
+}
+
+.header__title {
+    width: 80%;
+
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--principal);
+    text-align: center;
+    
+    margin-bottom: 2.2rem;
+}
+
+.header__description {
+    width: 100%;
+
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--title-paragraph);
+    text-align: center;
+}
+
+/*
+    RATING
+*/
+.container__rating {
+    width: 100%;
+    margin-bottom: 4.6rem;
+}
+
+.rating__stars {
+    width: 100%;
+    height: 85px;
+    margin-bottom: 1.6rem;
+    border-radius: 10px;
+    background:#f7f2f8;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stars__img {
+    margin-bottom: 1rem;
+}
+
+.stars__img img+img {
+    margin-left: 1rem;
+}
+
+.stars__description {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--principal);
+}
+
+/*
+    COMMENTS
+*/
+.container__comments {
+    width: 100%;
+}
+
+.comments__customer {
+    width: 100%;
+    background: var(--principal);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    padding: 4rem;
+}
+
+.customer__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.6rem;
+}
+
+.customer__header img {
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 2.2rem;
+}
+
+.header__customer-info strong {
+    font-size: 1.4rem;
+    display: block;
+    color: var(--strong);
+    margin-bottom: 0.3rem;
+}
+
+.header__customer-info span {
+    font-size: 1.4rem;
+    display: block;
+    color: var(--span);
+}
+
+.customer__paragraph {
+    font-size: 1.8rem;
+    color: var(--text);
+}

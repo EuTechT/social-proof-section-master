@@ -1,13 +1,31 @@
 :root {
     /* COLORS */
-    --primary-very-dark-magenta: hsl(300, 43%, 22%);
-    --primary-soft-pink: hsl(333, 80%, 67%);
+    --principal: hsl(300, 43%, 22%);
+    --span: hsl(333, 80%, 67%);
 
-    --neutral-dark-grayish-magenta: hsl(303, 10%, 53%);
-    --neutral-light-grayish-magenta: hsl(300, 24%, 96%);
-    --neutral-white: hsl(0, 0%, 100%);
+    --title-paragraph: hsl(303, 10%, 53%);
+    --text: hsl(300, 24%, 96%);
+    --strong: hsl(0, 0%, 100%);
 
     /* FONT */
     font-family: 'Spartan', sans-serif;
     font-size: 60%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+#container {
+    width: 88vw;
+}
+
+@media (min-width: 700px) {
+    :root {
+        font-size: 62.5%;
+    }
 }
