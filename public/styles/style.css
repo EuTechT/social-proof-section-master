@@ -14,7 +14,7 @@
     left: 0;
 }
 
-.bg-top-desktop {
+.bg-top-desktop, .bg-bottom-desktop {
     display: none;
 }
 
@@ -22,10 +22,6 @@
     position: fixed;
     bottom: 0;
     right: 0;
-}
-
-.bg-bottom-desktop {
-    display: none;
 }
 
 /*
@@ -137,4 +133,131 @@
 .customer__paragraph {
     font-size: 1.8rem;
     color: var(--text);
+}
+
+/*
+    MEDIA QUERIES
+*/
+@media all and (min-width: 900px) {
+    .container__comments {
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .comments__customer {
+        width: 48%;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .bg-top-desktop, .bg-bottom-desktop {
+        display: inline-block;
+    }
+
+    .bg-top-mobile, .bg-bottom-mobile {
+        display: none;
+    }
+
+    #container {
+        width: 76vw;
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-areas: 
+        'header rating'
+        'comments comments';
+        gap: 5rem 10rem;
+    }
+
+    .container__header {
+        align-items: flex-start;
+        grid-area: header;
+
+        margin-bottom: 0;
+    }
+
+    .container__rating {
+        grid-area: rating;
+
+        justify-self: center;
+        align-self: center;
+
+        margin-bottom: 0;
+    }
+
+    .container__comments {
+        grid-area: comments;
+    }
+
+    .header__title {
+        font-size: 4rem;
+    }
+    
+    .header__description {
+        font-size: 1.6rem;
+    }
+
+    .header__title, .header__description {
+        text-align: left;
+    }
+
+    .rating__stars {
+        height: 45px;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .stars__img {
+        margin: 0 4rem;
+    }
+
+    .stars__description {
+        font-size: 1.2rem;
+    }
+}
+
+
+@media all and (min-width: 1296px) {
+    .rating__stars:nth-child(1) {
+        margin-left: -8rem;
+    }
+
+    .rating__stars:nth-child(2) {
+        margin-left: -4rem;
+    }
+
+    .container__comments {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .comments__customer {
+        flex-wrap: nowrap;
+        width: 31%;
+        height: 200px;
+        margin-bottom: 0;
+    }
+
+    .comments__customer:nth-child(2) {
+        margin-top: 1.2rem;
+    }
+
+    .comments__customer:nth-child(3) {
+        margin-top: 2.4rem;
+    }
+    
+    .customer__header img {
+        height: 40px;
+    }
+    
+    .header__customer-info strong, .header__customer-info span {
+        font-size: 1.2rem;
+    }
+    
+    .customer__paragraph {
+        font-size: 1.2rem;
+    }
 }
